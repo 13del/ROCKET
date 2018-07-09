@@ -8,9 +8,9 @@ public class Main {
     //Mostrar a pantalla el codi dels coets i el número de propulsors que té.
     public static RocketController controller = new RocketController();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
       Rocket r1 = controller.createRocket("32WESSDS", 3);
-      Rocket r2=  controller.createRocket("LDSFJA32", 6);
+      Rocket r2 = controller.createRocket("LDSFJA32", 6);
 
         System.out.println("El código del cohete es " + r1.getIdRocket() + " y el número de propulsores es " + r1.getPropellerNumb());
         System.out.println("El código del cohete es " + r2.getIdRocket() + " y el número de propulsores es " + r2.getPropellerNumb());
