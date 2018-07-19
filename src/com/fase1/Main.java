@@ -1,4 +1,4 @@
-package com.races;
+package com.fase1;
 
 public class Main {
    // Volem fer un software de carreres de coets.
