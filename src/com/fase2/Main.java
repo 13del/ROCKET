@@ -9,11 +9,11 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-      Rocket r1 = new Rocket("32WESSDS", 3);
+      Rocket r1 = new Rocket("32WESSDS");
       r1.addPropeller(10);
       r1.addPropeller(30);
       r1.addPropeller(80);
-      Rocket r2 = new Rocket("LDSFJA32", 6);
+      Rocket r2 = new Rocket("LDSFJA32");
       r2.addPropeller(30);
       r2.addPropeller(40);
       r2.addPropeller(50);

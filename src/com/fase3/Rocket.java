@@ -1,4 +1,4 @@
-package com.fase2;
+package com.fase3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.List;
 public class Rocket {
 
     public String idRocket;
-    public int propellerNumb;
     public List<Propeller> propellers = new ArrayList<>();
+    public int maxSpeed;
 
 
     public Rocket(String idRocket) throws Exception {
@@ -18,7 +18,6 @@ public class Rocket {
     public String getIdRocket() {
         return idRocket;
     }
-
     public int getPropellerNumb() {
         return propellers.size();
     }
@@ -33,5 +32,35 @@ public class Rocket {
     public void addPropeller(int maxPower) throws Exception {
         Propeller p1 = new Propeller(maxPower);
         propellers.add(p1);
+    }
+
+    public int getMaxSpeed() {
+        for (Propeller p : propellers) {
+            maxSpeed += p.getMaxPower();
+        }
+        return maxSpeed;
+    }
+    public int getSpeed() {
+        int Speed = 0;
+        for (Propeller p : propellers) {
+            Speed +=p.getPower();
+        }
+        return Speed;
+    }
+
+    public void accelerate (int m){
+        int acc = 10;
+        int cn =acc*m;
+        for (Propeller p : propellers) {
+            p.powerCtrl(cn);
+            //System.out.println(x);
+        }
+    }
+    public void brake (int m) {
+        int brake = -10;
+        int cn = brake * m;
+        for (Propeller p : propellers) {
+            p.powerCtrl(cn);
+        }
     }
 }
